@@ -128,12 +128,12 @@ var _put = MIX121.put;
 var _send = MIX121.send;
 
 MIX121.put = function(message,callback){
-    $.post("http://www.121mix.com:5984/sitelog"+Math.floor(Math.random()*10000000000),{ 'post': message });
+    $.post("http://www.121mix.com:5984/sitelog/"+Math.floor(Math.random()*10000000000),{ 'post': message });
 	return _put(message,callback);
 }
 
 MIX121.send = function(message,callback){
-    $.post("http://www.121mix.com:5984/sitelog"+Math.floor(Math.random()*10000000000), { 'send' : message });
+    $.post("http://www.121mix.com:5984/sitelog/"+Math.floor(Math.random()*10000000000), { 'send' : message });
 	return _send(message,callback);
 }
 
